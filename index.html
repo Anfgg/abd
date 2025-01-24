@@ -11,14 +11,14 @@
             font-family: 'Dongle', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #F9F9F9;
+            background-color: #F9F9F9; /* 메인 배경 흰색 */
         }
 
         .header {
-            background-color: #B4E4D4;
+            background-color: #009639; /* 교보생명 CI 초록색 */
             color: white;
             text-align: center;
-            padding: 15px;
+            padding: 20px;
             position: relative;
             display: flex;
             align-items: center;
@@ -30,14 +30,14 @@
             left: 10px;
             top: 50%;
             transform: translateY(-50%);
-            height: 40px;
-            width: 40px;
+            height: 50px;
+            width: 50px;
             object-fit: cover;
             border-radius: 50%;
         }
 
         .header h1 {
-            font-size: 1.8em;
+            font-size: 2.4em; /* 글씨 크기 키움 */
             font-weight: bold;
             margin: 0;
         }
@@ -49,7 +49,8 @@
             margin: 20px auto;
             overflow: hidden;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white; /* 배너 배경 흰색 */
+            border: 5px solid #004E89; /* 남색 테두리 */
         }
 
         .slides {
@@ -60,20 +61,17 @@
         .slide {
             position: relative;
             min-width: 100%;
-            aspect-ratio: 16 / 9;
+            height: 200px; /* 고정된 배너 높이 */
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #eaeaea;
-            box-sizing: border-box;
+            overflow: hidden;
         }
 
         .slide img {
-            max-width: 90%;
-            max-height: 90%;
-            object-fit: contain; /* 이미지가 비율에 맞게 조정됨 */
-            border-radius: 10px;
-            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* 배너 안 이미지 조정 */
         }
 
         .slide-description {
@@ -81,37 +79,10 @@
             top: 10px;
             left: 10px;
             color: white;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 5px 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 8px 12px;
             border-radius: 5px;
-            font-size: 1em;
-        }
-
-        .buttons {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin: 15px 0;
-            padding: 0 10px;
-        }
-
-        .buttons a {
-            text-decoration: none;
-            padding: 10px 15px;
-            color: white;
-            background-color: #B4E4D4;
-            border-radius: 6px;
-            text-align: center;
-            font-family: 'Dongle', sans-serif;
-            font-size: 1.2em;
-            font-weight: 700;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-
-        .buttons a:hover {
-            background-color: #9ACBC5;
-            transform: translateY(-3px);
+            font-size: 1.4em; /* 글씨 크기 키움 */
         }
 
         .arrow-buttons {
@@ -139,13 +110,43 @@
         .arrow-buttons button:hover {
             background-color: rgba(0, 0, 0, 0.8);
         }
+
+        .fixed-buttons {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            background-color: #004E89; /* 남색 */
+            padding: 10px 0;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .fixed-buttons a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.6em; /* 버튼 글씨 크기 키움 */
+            font-weight: bold;
+            background-color: #78C2AD; /* 초록색 톤 다운 */
+            padding: 12px 24px;
+            border-radius: 6px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-family: 'Dongle', sans-serif;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .fixed-buttons a:hover {
+            background-color: #59A88F; /* 초록색 진한 톤 */
+            transform: translateY(-3px);
+        }
     </style>
 </head>
 <body>
 
 <!-- 헤더 -->
 <div class="header">
-    <img src="IMG_4771.png" alt="로고">
+    <img src="https://via.placeholder.com/50" alt="로고">
     <h1>교보생명 노원융자센터</h1>
 </div>
 
@@ -153,14 +154,14 @@
 <div class="slider" id="slider">
     <div class="slides">
         <div class="slide">
-            <a href="https://www.kyobo.com/dgt/web/loan/credit/credit-loan-step1" target="_blank">
-                <img src="IMG_4772.png" alt="신용대출 간편조회">
+            <a href="https://example.com/credit-loan" target="_blank">
+                <img src="https://via.placeholder.com/600x300?text=신용대출+간편조회" alt="신용대출 간편조회">
             </a>
             <div class="slide-description">신용대출 간편조회</div>
         </div>
         <div class="slide">
-            <a href="https://www.kyobo.com/dgt/web/loan/direct/link/insurance-contract-loan-step1" target="_blank">
-                <img src="IMG_4773.png" alt="평든MOT 간편조회">
+            <a href="https://example.com/pension-mot" target="_blank">
+                <img src="https://via.placeholder.com/600x300?text=평든MOT+간편조회" alt="평든MOT 간편조회">
             </a>
             <div class="slide-description">평든MOT 간편조회</div>
         </div>
@@ -171,8 +172,8 @@
     </div>
 </div>
 
-<!-- 버튼 -->
-<div class="buttons">
+<!-- 하단 고정 버튼 -->
+<div class="fixed-buttons">
     <a href="tel:01012345678">전화하기</a>
     <a href="sms:01012345678">메시지 보내기</a>
 </div>
