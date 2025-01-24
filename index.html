@@ -11,13 +11,14 @@
             font-family: 'Dongle', sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #F9F9F9;
         }
 
         .header {
             background-color: #B4E4D4;
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 15px;
             position: relative;
             display: flex;
             align-items: center;
@@ -29,14 +30,14 @@
             left: 10px;
             top: 50%;
             transform: translateY(-50%);
-            height: 50px;
-            width: 50px;
+            height: 40px;
+            width: 40px;
             object-fit: cover;
             border-radius: 50%;
         }
 
         .header h1 {
-            font-size: 2em;
+            font-size: 1.8em;
             font-weight: bold;
             margin: 0;
         }
@@ -44,11 +45,11 @@
         .slider {
             position: relative;
             width: 100%;
-            max-width: 600px;
-            margin: 40px auto;
+            max-width: 360px;
+            margin: 20px auto;
             overflow: hidden;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .slides {
@@ -59,43 +60,50 @@
         .slide {
             position: relative;
             min-width: 100%;
+            aspect-ratio: 16 / 9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #eaeaea;
             box-sizing: border-box;
         }
 
         .slide img {
-            width: 100%;
-            display: block;
-            border-radius: 15px;
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain; /* 이미지가 비율에 맞게 조정됨 */
+            border-radius: 10px;
             cursor: pointer;
         }
 
         .slide-description {
             position: absolute;
-            top: 20px;
-            left: 20px;
+            top: 10px;
+            left: 10px;
             color: white;
             background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-size: 1.2em;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 1em;
         }
 
         .buttons {
             display: flex;
             justify-content: center;
-            margin: 20px 0;
+            gap: 10px;
+            margin: 15px 0;
+            padding: 0 10px;
         }
 
         .buttons a {
             text-decoration: none;
-            padding: 12px 24px;
-            margin: 0 10px;
+            padding: 10px 15px;
             color: white;
             background-color: #B4E4D4;
-            border-radius: 8px;
+            border-radius: 6px;
             text-align: center;
             font-family: 'Dongle', sans-serif;
-            font-size: 1.5em;
+            font-size: 1.2em;
             font-weight: 700;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s ease, transform 0.2s ease;
@@ -104,11 +112,6 @@
         .buttons a:hover {
             background-color: #9ACBC5;
             transform: translateY(-3px);
-        }
-
-        .buttons a:active {
-            background-color: #88B0A8;
-            transform: translateY(0);
         }
 
         .arrow-buttons {
@@ -126,7 +129,7 @@
             background-color: rgba(0, 0, 0, 0.5);
             border: none;
             color: white;
-            font-size: 2em;
+            font-size: 1.5em;
             padding: 10px;
             cursor: pointer;
             border-radius: 50%;
@@ -150,20 +153,16 @@
 <div class="slider" id="slider">
     <div class="slides">
         <div class="slide">
-            <a href="https://www.kyobo.com/dgt/web/loan/credit/credit-loan-step1" target="_blank">
-                <img src="IMG_4772.png" alt="신용대출 간편조회">
+            <a href="IMG_4772.png" target="_blank">
+                <img src="https://via.placeholder.com/600x300?text=신용대출+간편조회" alt="신용대출 간편조회">
             </a>
             <div class="slide-description">신용대출 간편조회</div>
         </div>
         <div class="slide">
-            <a href="https://www.kyobo.com/dgt/web/loan/direct/link/insurance-contract-loan-step1" target="_blank">
-                <img src="IMG_4773.png" alt="평든MOT 간편조회">
+            <a href="IMG_4773.png" target="_blank">
+                <img src="https://via.placeholder.com/600x300?text=평든MOT+간편조회" alt="평든MOT 간편조회">
             </a>
             <div class="slide-description">평든MOT 간편조회</div>
-        </div>
-        <div class="slide">
-            <img src="https://via.placeholder.com/600x300?text=카드뉴스+3" alt="이번 달 프로모션">
-            <div class="slide-description">이번 달 프로모션</div>
         </div>
     </div>
     <div class="arrow-buttons">
